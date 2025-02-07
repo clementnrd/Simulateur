@@ -1,0 +1,63 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+// Constantes
+const double g = 9.81;  // Accélération gravitationnelle (m/s²)
+const double x_target = 2.37; // Distance cible en mètres
+const double y_target = 1.73; // Hauteur cible en mètres
+const double tolerance = 0.1; // Marge d'erreur acceptable (10 cm)
+
+// Fonction de conversion degrés → radians
+inline double toRadians(double angle) {
+    return angle * 3.14159265358979323846 / 180.0;
+}
+
+// Fonction qui calcule le temps de vol total
+double calculerTempsVol(double vitesse, double angle) {
+    double angleRad = toRadians(angle);
+    return (2 * vitesse * sin(angleRad)) / g;
+}
+
+// Fonction qui vérifie si la flèche atteint la cible et calcule le temps d'impact
+bool verifImpact(double vitesse, double angle, double& tempsImpact) {
+    double angleRad = toRadians(angle);
+
+    // Calcul du temps pour atteindre x_target
+    tempsImpact = x_target / (vitesse * cos(angleRad));
+
+    // Calcul de la hauteur à ce moment-là
+    double y = vitesse * sin(angleRad) * tempsImpact - 0.5 * g * tempsImpact * tempsImpact;
+
+    // Vérification si la hauteur est dans la marge de tolérance
+    return fabs(y - y_target) <= tolerance;
+}
+
+int main() {
+    double vitesse, angle;
+    cout << "=== Simulateur de Tir Balistique ===\n";
+
+    // Entrée utilisateur
+    cout << "Entrez la vitesse initiale du projectile (m/s) : ";
+    cin >> vitesse;
+    cout << "Entrez l'angle de tir (degres) : ";
+    cin >> angle;
+
+    // Calcul du temps de vol total
+    double tempsVolTotal = calculerTempsVol(vitesse, angle);
+    double tempsImpact;
+
+    // Vérification de l'impact
+    if (verifImpact(vitesse, angle, tempsImpact)) {
+        cout << "\n La fleche touche la cible a (" << x_target << "m, " << y_target << "m) ! \n";
+    } else {
+        cout << "\n La fleche ne touche pas la cible.\n";
+    }
+
+    // Affichage du temps de vol
+    cout << "\n Temps necessaire pour atteindre la cible : " << tempsImpact << " s" << endl;
+    cout << "  Temps de vol total du projectile : " << tempsVolTotal << " s" << endl;
+
+    return 0;
+}
