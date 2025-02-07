@@ -4,16 +4,20 @@
 using namespace std;
 
 int main() {
-    double vitesse, angle;
-    char continuer = 'o';
+    flaot vitesse_initial, angle, distance, hauteur_lance ;
 
     cout << "=== Simulateur de Tir Balistique ===\n";
 
-    while (continuer == 'o' || continuer == 'O') {
-        cout << "\nEntrez la vitesse initiale du projectile (m/s) : ";
-        cin >> vitesse;
+  while (vitesse_initial <= 0  || distance <= 0) || hauteur_lance <=0 {
+        cout << "Entrez la vitesse initiale du projectile (m/s) : " << endl;
+        cin >> vitesse_initial;
         cout << "Entrez l'angle de tir (degrés) : ";
         cin >> angle;
+        cout << "Entrer disantance a la quel vous etes de la cible (m) "<<endl ; 
+        cin >> distance ;
+        cout <<"Entrer la hauteur du lance ? :  " ; 
+        cin >> hauteur_lance; 
+  }
 
         // Calcul du tir en utilisant la fonction du header
         ResultatTir resultat = calculerTir(vitesse, angle);
