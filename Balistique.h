@@ -1,39 +1,25 @@
-#ifndef BALISTIQUE_H
-#define BALISTIQUE_H
+#include <iostream>
+#include <cmath> 
+#ifndef CALCUL_LANCER
+#define CALCUL_LANCER
 
-#include <cmath>
 
-// Constante de gravité
-const double g = 9.81;
 
-// Structure pour stocker les résultats du tir
-struct ResultatTir {
-    double tempsVol;
-    double portee;
-    double hauteurMax;
-};
-
-// Fonction pour convertir un angle en radians
-inline double toRadians(double angle) {
-    return angle * 3.1415926535 / 180.0;
+// Fonction pour calculer le temps de vol
+double calculer_temps_de_vol(double vitesse_initiale, double angle_radian, double distance_cible) {
+    return distance_cible / (vitesse_initiale * cos(angle_radian));
 }
 
-// Fonction qui calcule la portée, le temps de vol et la hauteur max
-ResultatTir calculerTir(double vitesse, double angle) {
-    ResultatTir resultat;
-    double angleRad = toRadians(angle);
-
-    // Temps de vol
-    resultat.tempsVol = (2 * vitesse * sin(angleRad)) / g;
-
-    // Portée du projectile
-    resultat.portee = vitesse * cos(angleRad) * resultat.tempsVol;
-
-    // Hauteur maximale atteinte
-    resultat.hauteurMax = (vitesse * sin(angleRad)) * (vitesse * sin(angleRad)) / (2 * g);
-
-    return resultat;
+// Fonction pour calculer la hauteur d'impact
+double calculer_hauteur_impact(double position_x_lanceur, double position_z_lanceur, double vitesse_initiale, double angle_radian, double distance_cible) {
+    return -g / 2 * pow((position_x_lanceur - distance_cible) / (vitesse_initiale * cos(angle_radian)), 2)
+           + tan(angle_radian) * (position_x_lanceur - distance_cible)
+           + position_z_lanceur;
 }
 
-#endif // BALISTIQUE_H
+int main(){
 
+return 0;	
+}
+
+#endif
