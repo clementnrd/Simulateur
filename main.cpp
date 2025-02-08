@@ -1,5 +1,5 @@
 #include <iostream>
-#include "balistique.h" // Inclusion du fichier header
+#include "CALCUL_LANCER.h" 
 #include "REGLE_LANCER.h"
 using namespace std;
 
