@@ -1,26 +1,22 @@
 #include <iostream>
 #include "balistique.h" // Inclusion du fichier header
-
+#include "REGLE_LANCER.h"
 using namespace std;
 
 int main() {
-    flaot vitesse_initial, angle, distance, hauteur_lance ;
+    flaot vitesse_initial, angle ;
 
     cout << "=== Simulateur de Tir Balistique ===\n";
 
-  while (vitesse_initial <= 0  || distance <= 0) || hauteur_lance <=0 {
+  while (vitesse_initial <= 0){
         cout << "Entrez la vitesse initiale du projectile (m/s) : " << endl;
         cin >> vitesse_initial;
         cout << "Entrez l'angle de tir (degrés) : ";
         cin >> angle;
-        cout << "Entrer disantance a la quel vous etes de la cible (m) "<<endl ; 
-        cin >> distance ;
-        cout <<"Entrer la hauteur du lance ? :  " ; 
-        cin >> hauteur_lance; 
-  }
+       }
 
         // Calcul du tir en utilisant la fonction du header
-        ResultatTir resultat = calculerTir(vitesse, angle);
+        ResultatTir resultat = calculerTir(vitesse_initial, angle);
 
         // Affichage des résultats
         cout << "\nRésultats du tir balistique :\n";
