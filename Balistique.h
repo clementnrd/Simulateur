@@ -16,10 +16,4 @@ double calculer_hauteur_impact(double position_x_lanceur, double position_z_lanc
            + tan(angle_radian) * (position_x_lanceur - distance_cible)
            + position_z_lanceur;
 }
-
-int main(){
-
-return 0;	
-}
-
 #endif
