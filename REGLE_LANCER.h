@@ -14,10 +14,4 @@ void Regle_lancer() {
     cout << "3. Le diametre de la cible est de 0.451 m.\n\n";
     cout << "Amusez-vous bien et lancez vos fléchettes avec précision !\n";
 }
-
-int main() {
-    Regle_lancer();
-    return 0;
-}
-
 #endif 
