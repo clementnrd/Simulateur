@@ -7,7 +7,7 @@ int main() {
     float vitesse_initiale, angle, position_x_lanceur, position_z_lanceur, point;
     const int g = 9.81; 
     const int distance_cible = 2.37 ;  
-    
+    const int point = 501 ; 
     cout << "=== Simulateur de Tir Balistique ===\n";
 
 do
@@ -24,85 +24,85 @@ do
         cout << "Temps de vol de la flechette est de (s): " << calculer_temps_de_vol(vitesse_initiale, angle_radian, distance_cible);
         cout << "Le point d'impactacte de la flechette est de (m):" << calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) ; 
       
-         if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) < 1.5573 )
+         if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) < 1.5572 )
         {
         cout << "Vous n avez pas touche la cible" << endl;
         cout << "Vous avez marque 0 points" << endl ; 
         point = point + 0;
         }
-        if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5573 )
+        else if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5572 )
         {
         cout << "Vous avez touche la cible" << endl ; 
-        cout << "Vous avez marque 3 points" << endl ; 
-        point = point + 6 ; 
+        cout << "Vous avez marque 6 points" << endl ; 
+        point = point - 6 ; 
         }
-        else if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5653)
+        else if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5652)
         {
         cout << "Vous avez touche la cible " <<endl  ;
         cout << " Vous avez marque 3 points  " << endl  ; 
-        point = point +3 ;
+        point = point - 3 ;
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.6199)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.5732)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 9 points " << endl ;
-        point = point  + 9 ; 
+        cout << "Vous avez marque 9 points " << endl ;
+        point = point  - 9 ; 
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.6279)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.6118)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 3 points " << endl ;
-        point = point  + 3 ;   
+        cout << "Vous avez marque 3 points " << endl ;
+        point = point  - 3 ;   
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.6955)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7113)
         { 
         cout << "Vous avez touche la cible " <<endl  ;
         cout << Vous avez marque 25 points " << endl ;
-        point = point  + 25 ;
+        point = point  - 25 ;
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7146)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.72085)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 50 points " << endl ;
-        point = point  + 50 ;    
+        cout << "Vous avez marque 50 points " << endl ;
+        point = point  - 50 ;    
         }
-       else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.74)
+       else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.73355)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 50 points " << endl ;
-        point = point  + 50 ;    
+        cout << "Vous avez marque 50 points " << endl ;
+        point = point  - 50 ;    
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7691)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 25 points " << endl ;
-        point = point  + 25 ;    
-        }
-         else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8376)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7431)
         {
         cout << "Vous avez touche la cible " <<endl  ;
         cout << Vous avez marque 25 points " << endl ;
-        point = point  + 3 ;    
+        point = point  - 25 ;    
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8527)
+         else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8266)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 25 points " << endl ;
+        cout << "Vous avez marque 3 points " << endl ;
+        point = point  - 3 ;    
+        }
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8346)
+        {
+        cout << "Vous avez touche la cible " <<endl  ;
+        cout << "Vous avez marque 9 points " << endl ;
         point = point  + 9 ;
         }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7691)
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8892)
         {
         cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 25 points " << endl ;
-        point = point  + 25 ;    
-        
-        
- 
-            
-  
-  
-  
-  }while(vitesse_initiale <= 0 || position_x_lanceur <= 0 || position_z_lanceur <=0 ) || point >= 50 );
+        cout << "Vous avez marque 3 points " << endl ;
+        point = point  - 3 ;   
+        }
+        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8972)
+        {
+        cout << "Vous avez touche la cible " <<endl  ;
+        cout << "Vous avez marque 6 points " << endl ;
+        point = point  - 6 ;  
+        }
+        }while(vitesse_initiale <= 0 || position_x_lanceur <= 0 || position_z_lanceur <=0 ) || point < 0 );
  
     double angle_radian = angle_degre * M_PI / 180.0; 
 
