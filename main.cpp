@@ -88,7 +88,7 @@ do
         {
         cout << "Vous avez touche la cible " <<endl  ;
         cout << "Vous avez marque 9 points " << endl ;
-        point = point  + 9 ;
+        point = point  - 9 ;
         }
         else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8892)
         {
@@ -102,7 +102,7 @@ do
         cout << "Vous avez marque 6 points " << endl ;
         point = point  - 6 ;  
         }
-        }while(vitesse_initiale <= 0 || position_x_lanceur <= 0 || position_z_lanceur <=0 ) || point < 0 );
+        }while(vitesse_initiale <= 0 || position_x_lanceur <= 0 || position_z_lanceur <=0 ) || point <= 0 );
  
     double angle_radian = angle_degre * M_PI / 180.0; 
 
