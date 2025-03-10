@@ -30,7 +30,7 @@ const double g = 9.81; // Accélération gravitationnelle en m/s²
 
 // Fonction pour calculer le temps de vol
 double calculerTempsDeVol(double vD, double alpha, double zD) {
-    double vDz = vD * sin(alpha); // Composante verticale de la vitesse initiale
+    double vDz = vD * sin(alpha); // Composante du vent vDZ
     double delta = vDz * vDz + 2 * g * zD;
 
     if (delta < 0) {
