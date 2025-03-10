@@ -17,3 +17,38 @@ double calculer_hauteur_impact(double position_x_lanceur, double position_z_lanc
            + position_z_lanceur;
 }
 #endif
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//2eme programme test avec vent VZ
+
+#include <iostream>
+#include <cmath>
+
+const double g = 9.81; // Accélération gravitationnelle en m/s²
+
+// Fonction pour calculer le temps de vol
+double calculerTempsDeVol(double vD, double alpha, double zD) {
+    double vDz = vD * sin(alpha); // Composante verticale de la vitesse initiale
+    double delta = vDz * vDz + 2 * g * zD;
+
+    if (delta < 0) {
+        std::cerr << "Erreur : pas de solution physique (delta négatif)." << std::endl;
+        return -1;
+    }
+
+    double t1 = (-vDz + sqrt(delta)) / g;
+    double t2 = (-vDz - sqrt(delta)) / g;
+
+    return (t1 > 0) ? t1 : t2; // On prend la valeur positive
+}
+
+// Fonction pour calculer la hauteur de l'impact
+double calculerHauteurImpact(double vD, double alpha, double xD, double zD, double xImpact) {
+    double vDx = vD * cos(alpha); // Composante horizontale de la vitesse initiale
+    double tImpact = (xImpact - xD) / vDx; // Temps pour atteindre xImpact
+
+    return -0.5 * g * tImpact * tImpact + vD * sin(alpha) * tImpact + zD;
+}
+
