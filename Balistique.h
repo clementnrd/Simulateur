@@ -30,7 +30,7 @@ const double g = 9.81; // Accélération gravitationnelle en m/s²
 
 // Fonction pour calculer le temps de vol
 double calculerTempsDeVol(double vD, double alpha, double zD) {
-    double vDz = vD * sin(alpha); // Composante du vent vDZ
+    double vDz = k * vD * sin(alpha); // Composante du vent vDZ avec k le coef de frottement de l'air
     double delta = vDz * vDz + 2 * g * zD;
 
     if (delta < 0) {
@@ -46,7 +46,7 @@ double calculerTempsDeVol(double vD, double alpha, double zD) {
 
 // Fonction pour calculer la hauteur de l'impact
 double calculerHauteurImpact(double vD, double alpha, double xD, double zD, double xImpact) {
-    double vDx = vD * cos(alpha); // Composante horizontale de la vitesse initiale
+    double vDx = k* vD * cos(alpha); // Composante du vecteur avec k le coef de frottemtn de l'air 
     double tImpact = (xImpact - xD) / vDx; // Temps pour atteindre xImpact
 
     return -0.5 * g * tImpact * tImpact + vD * sin(alpha) * tImpact + zD;
