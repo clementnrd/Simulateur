@@ -3,9 +3,6 @@
 #ifndef CALCUL_LANCER
 #define CALCUL_LANCER
 
-#include <iostream>
-#include <cmath>
-
 #define G 9.81  // Accélération gravitationnelle (m/s²)
 
 using namespace std;
