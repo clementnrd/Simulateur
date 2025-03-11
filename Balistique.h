@@ -6,11 +6,6 @@
 
 const double G = 9.81; // Accélération gravitationnelle (m/s²)
 
-struct ResultatLancer {
-    double x_impact;
-    double z_impact;
-    bool touche_cible;
-};
 
 // Fonction de calcul du lancer de projectile
 ResultatLancer calcul_lancer(double v0, double alpha, double Fv, double phi_v, 
@@ -33,7 +28,7 @@ ResultatLancer calcul_lancer(double v0, double alpha, double Fv, double phi_v,
     double delta = b * b;
 
     if (a == 0 || delta < 0) {
-        std::cout << "Le projectile ne touche pas le sol." << std::endl;
+        cout << "Le projectile ne touche pas le sol." << std::endl;
         return {0, 0, false};
     }
 
@@ -51,4 +46,4 @@ ResultatLancer calcul_lancer(double v0, double alpha, double Fv, double phi_v,
     return {x_impact, z_impact, touche_cible};
 }
 
-#endif // CALCUL_LANCER_H
+#endif 
