@@ -3,29 +3,6 @@
 #ifndef CALCUL_LANCER
 #define CALCUL_LANCER
 
-#define G 9.81  // Accélération gravitationnelle (m/s²)
-
-using namespace std;
-
-// Fonction principale
-int main() {
-    // Paramètres de la cible
-    const double x_cible = 2.37;       // Distance en X (m)
-    const double z_cible = 1.73;       // Hauteur du centre de la cible (m)
-    const double rayon_cible = 0.2255; // Rayon de la cible (m)
-
-    // Variables utilisateur
-    double v0, alpha, Fv, phi_v;
-
-    // Saisie des paramètres
-    cout << "Entrez la vitesse initiale (m/s) : ";
-    cin >> v0;
-    cout << "Entrez l'angle de tir (degres) : ";
-    cin >> alpha;
-    cout << "Entrez la force du vent (N) : ";
-    cin >> Fv;
-    cout << "Entrez l'angle du vent (degres, 0 = vent de face, 180 = vent arriere) : ";
-    cin >> phi_v;
 
     // Conversion des angles en radians
     double alpha_rad = alpha * (3, 14 / 180.0);
