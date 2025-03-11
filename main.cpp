@@ -4,8 +4,9 @@
 using namespace std ; 
 int main() {
     // Paramètres du projectile
-    double v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible;
-
+    double v0, alpha, Fv, phi_v, x_cible, z_cible;
+    const int rayon_cible = 0.2255 ; 
+    
     // Saisie des valeurs
     cout << "Entrez la vitesse initiale (m/s) : ";
     cin >> v0;
@@ -19,8 +20,7 @@ int main() {
     cin >> x_cible;
     cout << "Entrez la position Z de la cible (m) : ";
     cin >> z_cible;
-    cout << "Entrez le rayon de la cible (m) : ";
-    cin >> rayon_cible;
+  
 
     // Appel de la fonction de calcul
     ResultatLancer resultat = calcul_lancer(v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible);
