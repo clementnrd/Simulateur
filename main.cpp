@@ -27,7 +27,7 @@ int main() {
     
     resultat_lancer = position_fleche(g, x_cible, xd, vitesse_ini, alpha, phi_v, zd)
 
-    temps_vol= (
+    temps_vol=  calcul_temps_vol(
 
     
 
