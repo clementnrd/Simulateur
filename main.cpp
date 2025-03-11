@@ -1,119 +1,37 @@
 #include <iostream>
-#include "CALCUL_LANCER.h" 
-#include "REGLE_LANCER.h"
-using namespace std;
+#include "calcul_lancer.h"
 
 int main() {
-    
-    double v0, alpha, Fv, phi_v;
-   
-    const double x_cible = 2.37;       // Distance en X (m)
-    const double z_cible = 1.73;       // Hauteur du centre de la cible (m)
-    const double rayon_cible = 0.2255; // Rayon de la cible (m)
-    cout << "=== Simulateur de Tir Balistique ===\n";
+    // Paramètres du projectile
+    double v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible;
 
-    
-    
-    do
-  {
-    cout << "Entrez la vitesse initiale (m/s) : ";
-    cin >> v0;
-    cout << "Entrez l'angle de tir (degres) : ";
-    cin >> alpha;
-    cout << "Entrez la force du vent (N) : ";
-    cin >> Fv;
-    cout << "Entrez l'angle du vent (degres, 0 = vent de face, 180 = vent arriere) : ";
-    cin >> phi_v; 
-  }
-    
-        cout << "Temps de vol de la flechette est de (s): " << calculer_temps_de_vol(vitesse_initiale, angle_radian, distance_cible);
-        cout << "Le point d'impactacte de la flechette est de (m):" << calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) ; 
-      
-         if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) < 1.5572 )
-        {
-        cout << "Vous n avez pas touche la cible" << endl;
-        cout << "Vous avez marque 0 points" << endl ; 
-        point = point + 0;
-        }
-        else if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5572 )
-        {
-        cout << "Vous avez touche la cible" << endl ; 
-        cout << "Vous avez marque 6 points" << endl ; 
-        point = point - 6 ; 
-        }
-        else if (calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) >= 1.5652)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << " Vous avez marque 3 points  " << endl  ; 
-        point = point - 3 ;
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.5732)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 9 points " << endl ;
-        point = point  - 9 ; 
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.6118)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 3 points " << endl ;
-        point = point  - 3 ;   
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7113)
-        { 
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 25 points " << endl ;
-        point = point  - 25 ;
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.72085)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 50 points " << endl ;
-        point = point  - 50 ;    
-        }
-       else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.73355)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 50 points " << endl ;
-        point = point  - 50 ;    
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.7431)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << Vous avez marque 25 points " << endl ;
-        point = point  - 25 ;    
-        }
-         else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8266)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 3 points " << endl ;
-        point = point  - 3 ;    
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8346)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 9 points " << endl ;
-        point = point  - 9 ;
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8892)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 3 points " << endl ;
-        point = point  - 3 ;   
-        }
-        else if ( calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g)>= 1.8972)
-        {
-        cout << "Vous avez touche la cible " <<endl  ;
-        cout << "Vous avez marque 6 points " << endl ;
-        point = point  - 6 ;  
-        }
-        }while(vitesse_initiale <= 0 || position_x_lanceur <= 0 || position_z_lanceur <=0 ) || point <= 0 );
- 
-    double angle_radian = angle_degre * M_PI / 180.0; 
+    // Saisie des valeurs
+    std::cout << "Entrez la vitesse initiale (m/s) : ";
+    std::cin >> v0;
+    std::cout << "Entrez l'angle de tir (degrés) : ";
+    std::cin >> alpha;
+    std::cout << "Entrez la force du vent (N) : ";
+    std::cin >> Fv;
+    std::cout << "Entrez l'angle du vent (degrés) : ";
+    std::cin >> phi_v;
+    std::cout << "Entrez la position X de la cible (m) : ";
+    std::cin >> x_cible;
+    std::cout << "Entrez la position Z de la cible (m) : ";
+    std::cin >> z_cible;
+    std::cout << "Entrez le rayon de la cible (m) : ";
+    std::cin >> rayon_cible;
 
-   
-cout << "Merci d'avoir utilisé le simulateur !\n";   
-return 0;
+    // Appel de la fonction de calcul
+    ResultatLancer resultat = calcul_lancer(v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible);
+
+    // Affichage des résultats
+    std::cout << "Impact du projectile : (" << resultat.x_impact << ", " << resultat.z_impact << ") m" << std::endl;
+
+    if (resultat.touche_cible) {
+        std::cout << "----Le projectile touche la cible !-----" << std::endl;
+    } else {
+        std::cout << "xxx Le projectile rate la cible. xxx" << std::endl;
+    }
+
+    return 0;
 }
-
-
