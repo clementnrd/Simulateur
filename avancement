@@ -1,0 +1,26 @@
+Martin Tailler
+Clément Nairaud 
+
+
+				Cahier des charges, suivis PROGRAMMATION
+
+
+Listes des taches à faire (idées):
+
+- Informations sur les règles du lancer (1)
+- Saisis des entrés des fonctions (2) 
+- Calculer le temps de vol de la fléchette (3)
+- Calculer la hauteur du point d’impact de la fléchette (4)
+- Faire un système de point en fonction des hauteurs des lancés (5)
+- Faire un système de compteur de points (6)
+- Ajouter un second joueur (7)
+- Implémenter les même règles, cités précédemment (8)
+- Choisir le mode jeux (501 double out , 301 double out…) (9)
+...
+ 
+Taches réalisés, difficultés rencontrés (solutions), date réalisé: 	
+
+- 1/ aucune difficulté (07/02/2025)
+- 2/ aucune difficulté (25/02/2025)
+- 3/ Problème pour avoir le temps juste. Solution : convertir degrés en radians et utilisé double (25/02/2025)
+- 4/ Problème pour mettre les puissances. Solution : regarder un tuto sur YouTube.  (11/03/2025)	
