@@ -25,7 +25,7 @@ int main() {
     cout << "Entrez la position position zd de la cible (m) : ";
     cin >> zd;
     
-    resultat_lancer = 
+    resultat_lancer = position_fleche(
   
 
     
