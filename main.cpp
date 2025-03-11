@@ -4,7 +4,9 @@
 using namespace std;
 
 int main() {
-    float vitesse_initiale, angle, position_x_lanceur, position_z_lanceur, point;
+    
+    double v0, alpha, Fv, phi_v;
+   
     const double x_cible = 2.37;       // Distance en X (m)
     const double z_cible = 1.73;       // Hauteur du centre de la cible (m)
     const double rayon_cible = 0.2255; // Rayon de la cible (m)
