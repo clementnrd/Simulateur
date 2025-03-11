@@ -10,16 +10,19 @@ int main() {
     const int point = 501 ; 
     cout << "=== Simulateur de Tir Balistique ===\n";
 
-do
+    
+    
+    do
   {
-        cout << "Entrez la vitesse initiale du projectile (m/s) : "<< endl;
-        cin >> vitesse_initiale;
-        cout << "Entrez l'angle de tir (degrés) : " << endl ;
-        cin >> angle_degre;
-        cout << "Entrez la position x du lanceur (m) : " << endl;
-        cin >> position_x_lanceur;
-        cout << "Entrez la position z du lanceur (m) : " << endl ;
-        cin >> position_z_lanceur ;
+    cout << "Entrez la vitesse initiale (m/s) : ";
+    cin >> v0;
+    cout << "Entrez l'angle de tir (degres) : ";
+    cin >> alpha;
+    cout << "Entrez la force du vent (N) : ";
+    cin >> Fv;
+    cout << "Entrez l'angle du vent (degres, 0 = vent de face, 180 = vent arriere) : ";
+    cin >> phi_v; 
+  }
     
         cout << "Temps de vol de la flechette est de (s): " << calculer_temps_de_vol(vitesse_initiale, angle_radian, distance_cible);
         cout << "Le point d'impactacte de la flechette est de (m):" << calculer_hauteur_impact(position_x_lanceur, position_z_lanceur ,vitesse_initiale, angle_radian, distance_cible, g) ; 
