@@ -7,7 +7,7 @@
 using namespace std ; 
 int main() {
     // Paramètres du projectile
-    double v0, alpha, phi_v, x_cible, xd, zd, resultat_lancer, temps_vol;
+    double v0, alpha, phi_y, x_cible, z_cible, y_cible, xd, zd, yd, resultat_lancer, temps_vol, pos_y, pos_z;
     const float rayon_cible = 0.2255 ; 
     const float g = 9.81; 
 
@@ -17,17 +17,24 @@ int main() {
     cout << "Entrez l'angle de tir (degrés) : ";
     cin >> alpha;
     cout << "Entrez l'angle du vent (degrés) : ";
-    cin >> phi_v;
+    cin >> phi_y;
     cout << "Entrez la position X de la cible (m) : ";
     cin >> x_cible;
-    cout << "Entrez la position position xd de la cible (m) : ";
+    cout << "Entrez la position Z de la cible (m) : ";
+    cin >> z_cible;
+    cout << "Entrez la position Y de la cible (m) : ";
+    cin >> y_cible;
+    cout << "Entrez la position position xd du tirreur (m) : ";
     cin >> xd;
-    cout << "Entrez la position position zd de la cible (m) : ";
+    cout << "Entrez la position position zd du tirreur (m) : ";
     cin >> zd;
+    cout << "Entrez la position position yd du tirreur (m) : ";
+    cin >> yd;
+  
     
-    resultat_lancer = position_fleche(g, x_cible, xd, v0, alpha, phi_v, zd)
+    resultat_lancer = position_fleche(g, x_cible, xd, v0, alpha, phi_y, zd)
 
-    temps_vol=  calcul_temps_vol(x_cible, xd, v0, phi_v
+    temps_vol=  calcul_temps_vol(x_cible, xd, v0, alpha, phi_y)
 
     
 
