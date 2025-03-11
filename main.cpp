@@ -4,7 +4,7 @@
 using namespace std ; 
 int main() {
     // Paramètres du projectile
-    double v0, alpha, Fv, phi_v, x_cible, z_cible;
+    double v0, alpha, Fv, phi_v, x_cible, z_cible, ResultatLancer;
     const int rayon_cible = 0.2255 ; 
     
     // Saisie des valeurs
@@ -23,7 +23,7 @@ int main() {
   
 
     // Appel de la fonction de calcul
-    ResultatLancer resultat = calcul_lancer(v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible);
+    ResultatLancer= calcul_lancer(v0, alpha, Fv, phi_v, x_cible, z_cible, rayon_cible);
 
     // Affichage des résultats
     cout << "Impact du projectile : (" << resultat.x_impact << ", " << resultat.z_impact << ") m" << endl;
