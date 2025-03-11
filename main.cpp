@@ -25,9 +25,9 @@ int main() {
     cout << "Entrez la position position zd de la cible (m) : ";
     cin >> zd;
     
-    resultat_lancer = position_fleche(g, x_cible, xd, vitesse_ini, alpha, phi_v, zd)
+    resultat_lancer = position_fleche(g, x_cible, xd, v0, alpha, phi_v, zd)
 
-    temps_vol=  calcul_temps_vol(
+    temps_vol=  calcul_temps_vol(x_cible, xd, v0, phi_v
 
     
 
