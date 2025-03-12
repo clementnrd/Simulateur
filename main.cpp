@@ -15,7 +15,7 @@ int main() {
     cin >> v0 ;
     cout << "Entrez l'angle de tir sur z  (degres) : ";
     cin >> alpha ;
-    cout << "Entrez l'angle sur y  (degres) : ";
+    cout << "Entrez l'angle de tir sur y  (degres) : ";
     cin >> phi_y ;
     cout << "Entrez la position X de la cible (m) : ";
     cin >> x_cible ;
