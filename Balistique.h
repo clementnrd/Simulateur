@@ -22,7 +22,7 @@ z = -g/2 * ((x - xd / 2 vitesse_ini * cos(alpha_rad)) * cos(phi_rad)*(x - xd / 2
 return z; 
 }
 
-double posistion_fleche_y(double x, double xd, double phi_rad, double yd)
+double position_fleche_y(double x, double xd, double phi_rad, double yd)
 {
 double phi_rad = phi * (3.14 / 180.0); 
 double y ; 
