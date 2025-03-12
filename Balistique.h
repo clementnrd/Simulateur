@@ -1,5 +1,5 @@
-#ifndef CALCUL_LANCER_H
-#define CALCUL_LANCER_H
+#ifndef CALCUL_LANCER
+#define CALCUL_LANCER
 #include <iostream>
 #include <cmath>
 
