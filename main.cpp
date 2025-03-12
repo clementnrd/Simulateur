@@ -44,7 +44,7 @@ int main() {
     cout << "Position z " << resultat_lancer_z << endl ;
     cout << "position y " << resultat_lancer_y << endl ;
 
-    if ( resultat_lancer_z < 1.73 || resultat_lancer_z >2.181 || resultat_lancer_y > rayon_cible || resultat_lancer_y < - rayon_cible )
+    if ( resultat_lancer_z < z_cible || resultat_lancer_z > z_cible+rayon_cible || resultat_lancer_y > rayon_cible || resultat_lancer_y < - rayon_cible )
     {
     cout << "Vous n avez pas toucher la cible" ;
     point = 0;
