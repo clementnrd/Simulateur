@@ -7,7 +7,7 @@
 using namespace std ; 
 int main() {
     // Paramètres du projectile
-    double v0, alpha, phi_y, x_cible, z_cible, y_cible, xd, zd, yd, resultat_lancer, temps_vol, pos_y, pos_z;
+    double v0, alpha, phi_y, x_cible, z_cible, y_cible, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol
     const float rayon_cible = 0.2255 ; 
     const float g = 9.81; 
 
@@ -32,8 +32,10 @@ int main() {
     cin >> yd;
   
     
-    resultat_lancer = position_fleche(g, x_cible, xd, v0, alpha, phi_y, zd)
+    resultat_lancer_z = position_fleche_z(g, x_cible, xd, v0, alpha, phi_y, zd)
 
+    resultat_lancer_y= position_fleche_y(
+    
     temps_vol=  calcul_temps_vol(x_cible, xd, v0, alpha, phi_y)
 
     
