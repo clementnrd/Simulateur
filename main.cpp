@@ -7,7 +7,7 @@
 using namespace std ; 
 int main() {
     // Paramètres du projectile
-    double v0, alpha, phi_y, x_cible, z_cible, y_cible, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol
+    double v0, alpha, phi_y, x_cible, z_cible, y_cible, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol, point
     const float rayon_cible = 0.2255 ; 
     const float g = 9.81; 
 
@@ -32,13 +32,19 @@ int main() {
     cin >> yd;
   
     
-    resultat_lancer_z = position_fleche_z(g, x_cible, xd, v0, alpha, phi_y, zd)
+    resultat_lancer_z = position_fleche_z(g, x_cible, xd, v0, alpha, phi_y, zd); 
 
-    resultat_lancer_y= position_fleche_y(
+    resultat_lancer_y = position_fleche_y(x_cible, x, phi_y, yd); 
     
-    temps_vol=  calcul_temps_vol(x_cible, xd, v0, alpha, phi_y)
+    temps_vol =  calcul_temps_vol(x_cible, xd, v0, alpha, phi_y) ; 
 
-    
+    if ( resultat_lancer_z < 1.73 || resultat_lancer_z >2.181 || resultat_lancer_y > rayon_cible || resultat_lancer_y < - rayon_cible )
+    {
+    cout << "Vous n'avez pas toucher la cible") ; 
+    point = 0;
+    }
+    if 
+        
 
     return 0;
 }
