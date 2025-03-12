@@ -10,7 +10,8 @@ int main() {
     const float rayon_cible = 0.2255 ;
     const float g = 9.81;
 
-
+    do
+    {
     cout << "Entrez la vitesse initiale (m/s) : ";
     cin >> v0 ;
     cout << "Entrez l'angle de tir sur z  (degres) : ";
@@ -29,7 +30,10 @@ int main() {
     cin >> zd ;
     cout << "Entrez la position position yd du tirreur (m) : ";
     cin >> yd ;
-
+    
+    }while ( v0 >0  ) 
+   
+    cout << "Veuillez choisir une vitesse initial positive"; 
 
     resultat_lancer_z = position_fleche_z(g, x_cible, xd, v0, alpha, phi_y, zd) ;
 
