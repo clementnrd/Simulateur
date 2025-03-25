@@ -6,7 +6,7 @@
 using namespace std ;
 int main() {
     // Paramètres du projectile
-    double v0, alpha, phi_y, x, z, y, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol, point, joueurs, joueurs_partie, tir ;
+    double v0, alpha_z, phi_y, x, z, y, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol, point, joueurs, joueurs_partie, tir ;
     const int tir = 0 ; 
     const float rayon_cible = 0.2255 ;
     const float g = 9.81;
@@ -34,7 +34,7 @@ int main() {
         cout << "Entrez la vitesse initiale (m/s)  : ";
         cin >> v0 ;
         cout << "Entrez l'angle de tir sur z  (degres) : ";
-        cin >> alpha ;
+        cin >> alpha_z ;
         cout << "Entrez l'angle de tir sur y  (degres) : ";
         cin >> phi_y ;
         cout << "Entrez la position X du tirreur (m) : ";
@@ -52,15 +52,15 @@ int main() {
         tir = tir +1;
         cout<< "Vous avez tire:  " << tir << " fleches" << endl  ; 
 
-        resultat_lancer_z =
-        resultat_lancer_y = 
+        resultat_lancer_z = position_fleche_z(g, x, xd , v0, alpha_z, phi_y, zd) 
+        resultat_lancer_y = position_fleche_y(x, xd , phi_y, yd)
        
         }while ( v0 >0) ;
   cout << "Veuillez choisir une vitesse initial positive;
 
     
 
-if( resultat_lancer_y < 0.3 ||  resultat_lancer_y > 1.52 || resultat_lancer_z <-0.61 || resulat_lancer_z >0.61)
+/* if( resultat_lancer_y < 0.3 ||  resultat_lancer_y > 1.52 || resultat_lancer_z <-0.61 || resulat_lancer_z >0.61)
 {
     cout << "Vous navez pas toucher la cible, vous avez marquer 0 points"; 
     point = point +0;
@@ -96,7 +96,7 @@ else if (resulat_lancer_y > 0.84 &&  resultat_lancer_y <0.98 && resultat_lancer_
     point = point +9;
 else if (resulat_lancer_y > 0.9 &&  resultat_lancer_y <0.92 && resultat_lancer_z > && resulat_lancer_z <0.13)  
     cout << "Vous avez toucher la cible, vous avez marquer 1 points"; 
-    point = point +8;
+    point = point +8; */ 
 
     return 0;
 }
