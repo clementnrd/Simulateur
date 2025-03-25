@@ -10,6 +10,7 @@ int main() {
     const int tir = 0 ; 
     const float rayon_cible = 0.2255 ;
     const float g = 9.81;
+    const float air_cible = 3.14* rayon_cible * rayon_cible ; 
 
   cout << "combien de joueurs etes vous  (1/4) ? ";
     cin >> joueurs_partie;
@@ -50,19 +51,16 @@ int main() {
         cin >> yd ;
         tir = tir +1;
         cout<< "Vous avez tire:  " << tir << " fleches" << endl  ; 
-        
-                 
-    }while ( v0 >0) ;
-   
-    cout << "Veuillez choisir une vitesse initial positive;
+
+        resultat_lancer_z =
+        resultat_lancer_y = 
+       
+        }while ( v0 >0) ;
+  cout << "Veuillez choisir une vitesse initial positive;
 
     
 
-    if ( resultat_lancer_z < z_cible || resultat_lancer_z > z_cible+rayon_cible || resultat_lancer_y > rayon_cible || resultat_lancer_y < - rayon_cible )
-    {
-    cout << "Vous n avez pas toucher la cible" ;
-    point = 0;
-    }
+    if (resultat_lancer_z < ra
 
 
   
