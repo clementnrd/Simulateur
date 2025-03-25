@@ -60,7 +60,7 @@ int main() {
 
     
 
-    if (resultat_lancer_z < ra
+    if (resultat_lancer_z < resul
 
 
   
