@@ -1,6 +1,6 @@
 #include <iostream>
 #include "calcul_lancer.h"
-#inculde "regle_lancer.h"
+#include "regle_lancer.h"
 
 
 using namespace std ;
@@ -52,15 +52,27 @@ int main() {
         tir = tir +1;
         cout<< "Vous avez tire:  " << tir << " fleches" << endl  ; 
 
-        resultat_lancer_z = position_fleche_z(g, x, xd , v0, alpha_z, phi_y, zd) 
-        resultat_lancer_y = position_fleche_y(x, xd , phi_y, yd)
+        resultat_lancer_z = position_fleche_z(g, x, xd , v0, alpha_z, phi_y, zd) ;
+        resultat_lancer_y = position_fleche_y(x, xd , phi_y, yd);
        
         }while ( v0 >0) ;
   cout << "Veuillez choisir une vitesse initial positive;
 
     
 
-/* if( resultat_lancer_y < 0.3 ||  resultat_lancer_y > 1.52 || resultat_lancer_z <-0.61 || resulat_lancer_z >0.61)
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      /* if( resultat_lancer_y < 0.3 ||  resultat_lancer_y > 1.52 || resultat_lancer_z <-0.61 || resulat_lancer_z >0.61)
 {
     cout << "Vous navez pas toucher la cible, vous avez marquer 0 points"; 
     point = point +0;
