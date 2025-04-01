@@ -1,12 +1,13 @@
 #include <iostream>
 #include "calcul_lancer.h"
 #include "regle_lancer.h"
+#include <cmath>
 
 
 using namespace std ;
 int main() {
     // Paramètres du projectile
-    double v0, alpha_z, phi_y, x, z, y, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol, point, joueurs, joueurs_partie, tir ;
+    double v0, alpha_z, phi_y, x, z, y, xd, zd, yd, resultat_lancer_z, resultat_lancer_y, temps_vol, point, joueurs, joueurs_partie, tir,r, teta;
     const int tir = 0 ; 
     const float rayon_cible = 0.2255 ;
     const float g = 9.81;
@@ -55,60 +56,13 @@ int main() {
         resultat_lancer_z = position_fleche_z(g, x, xd , v0, alpha_z, phi_y, zd) ;
         resultat_lancer_y = position_fleche_y(x, xd , phi_y, yd);
        
-        }while ( v0 >0) ;
+        r = sqrt((resultat_lancer_z*resultat_lancer_z)+ (resultat_lancer_y* resultat_lancer_y));
+        teta = 
+    
+    }while ( v0 >0) ;
   cout << "Veuillez choisir une vitesse initial positive;
 
     
 
 
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      /* if( resultat_lancer_y < 0.3 ||  resultat_lancer_y > 1.52 || resultat_lancer_z <-0.61 || resulat_lancer_z >0.61)
-{
-    cout << "Vous navez pas toucher la cible, vous avez marquer 0 points"; 
-    point = point +0;
-}
-else if (resulat_lancer_y < 0.36 &&   resultat_lancer_y < 1.46 && resultat_lancer_z >-0.55 && resulat_lancer_z <0.55)  
-    cout << "Vous avez toucher la cible, vous avez marquer 1 points"; 
-    point = point +1;
-}
-else if (resulat_lancer_y > 0.42 &&  resultat_lancer_y < 1.4 && resultat_lancer_z >-0.49 && resulat_lancer_z <0.49)  
-    cout << "Vous avez toucher la cible, vous avez marquer 2 points"; 
-    point = point +2;
-
-else if (resulat_lancer_y > 0.48 &  resultat_lancer_y < 1.34 && resultat_lancer_z >-0.43 && resulat_lancer_z <0.43)  
-    cout << "Vous avez toucher la cible, vous avez marquer 3 points"; 
-    point = point + 3;
-else if (resulat_lancer_y > 0.54 &&  resultat_lancer_y < 1.28 && resultat_lancer_z >-0.37 &&  resulat_lancer_z <0.37)  
-    cout << "Vous avez toucher la cible, vous avez marquer 5 points"; 
-    point = point +4;
-else if (resulat_lancer_y > 0.6 &&  resultat_lancer_y < 1.22 && resultat_lancer_z >-0.31 && resulat_lancer_z <0.31)  
-    cout << "Vous avez toucher la cible, vous avez marquer 5 points"; 
-    point = point +5;
-else if (resulat_lancer_y > 0.66 &&  resultat_lancer_y < 1.16 && resultat_lancer_z >-0.25 &&  resulat_lancer_z <0.25)  
-    cout << "Vous avez toucher la cible, vous avez marquer 6 points"; 
-    point = point +6;
-else if (resulat_lancer_y > 0.72 &&  resultat_lancer_y <1.1  && resultat_lancer_z >-0.19 && resulat_lancer_z <0.19)  
-    cout << "Vous avez toucher la cible, vous avez marquer 7 points"; 
-    point = point +7;
-else if (resulat_lancer_y > 0.78 &&  resultat_lancer_y <1.04 && resultat_lancer_z >-0.13 && resulat_lancer_z <0.13)  
-    cout << "Vous avez toucher la cible, vous avez marquer 8 points"; 
-    point = point +8;
-else if (resulat_lancer_y > 0.84 &&  resultat_lancer_y <0.98 && resultat_lancer_z >-0.7 && resulat_lancer_z <0.7)  
-    cout << "Vous avez toucher la cible, vous avez marquer 9 points"; 
-    point = point +9;
-else if (resulat_lancer_y > 0.9 &&  resultat_lancer_y <0.92 && resultat_lancer_z > && resulat_lancer_z <0.13)  
-    cout << "Vous avez toucher la cible, vous avez marquer 1 points"; 
-    point = point +8; */ 
-
-    return 0;
-}
