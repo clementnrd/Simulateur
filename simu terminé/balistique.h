@@ -10,10 +10,10 @@ using namespace std;
 // Constante
 const double g = 9.81;               // Gravie (m/s)
 const double K = 8.68e-6;            // Coefficient de frottement de l'air
-const double masse = 0.030;          // Masse de la fl�chette en kg f
+const double masse = 0.030;          // Masse de la flechette en kg f
 const double x_cible = 2.37;         // Position de la cible en x (m)
 const double z_cible = 1.73;         // Position de la cible en z (m)
-const double diametre_cible = 0.451; // Diam�tre de la cible en m
+const double diametre_cible = 0.451; // Diametre de la cible en m
 
 // Fonction pour resoudre l'equation quadratique et obtenir t
 double calculer_t(double v0, double alpha, double phi, double vv, double alpha_v, double phi_v);
